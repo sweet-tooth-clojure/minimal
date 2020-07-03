@@ -13,7 +13,7 @@
   {:include-data false}
 
   :duct.server.http/jetty
-  {:port #duct/env ["HTTP_SERVER_PORT" Int :or 3000]}
+  {:port #duct/env ["HTTP_SERVER_PORT" Int :or 3010]}
 
   ;; logging
   :duct.logger/timbre
@@ -30,11 +30,6 @@
  :duct.profile/local #duct/include "local.edn"
  :duct.profile/dev   #duct/include "dev.edn"
  :duct.profile/test  #duct/include "test.edn"
-
- :duct.profile/staging
- {:duct.core/environment :staging}
- ;; end staging profile
-
 
  :duct.profile/prod
  {:duct.core/environment :production}

@@ -7,8 +7,6 @@
             [duct.core :as duct]
             [duct.core.repl :as duct-repl]
 
-            [datomic.api :as d]
-
             [minimal.backend.duct :as app-duct] ;; for multimethod definitions
 
             [integrant.core :as ig]

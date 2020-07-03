@@ -1,5 +1,5 @@
 (ns minimal.frontend.components.home)
 
-(defn home
+(defn component
   []
   [:div.home "Home"])
