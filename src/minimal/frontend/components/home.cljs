@@ -2,4 +2,4 @@
 
 (defn component
   []
-  [:div.home "Home"])
+  [:div.home "This is the home component"])
