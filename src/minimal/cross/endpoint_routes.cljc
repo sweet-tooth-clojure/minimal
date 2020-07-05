@@ -6,7 +6,7 @@
   (serr/expand-routes
    [{::serr/path-prefix "/api/v1"}
     ;; generated routes will be inserted below the following comment
-    #_st:begin-api-routes]))
+    #_st:begin-ns-routes]))
 
 (defmethod ig/init-key ::routes [_ _]
   routes)
