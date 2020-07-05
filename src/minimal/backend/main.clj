@@ -20,7 +20,7 @@
 
 (defn -main
   [cmd]
-  (let [env    (keyword (or (System/getenv "APP_ENV" :dev)))
+  (let [env    (keyword (or (System/getenv "APP_ENV") :dev))
         config (es/config env)]
     (log/info "-main" ::-main {:cmd cmd :env env})
     (case cmd
