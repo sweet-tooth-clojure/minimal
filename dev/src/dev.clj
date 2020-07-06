@@ -13,6 +13,8 @@
             [integrant.repl :as irp :refer [clear halt init reset]]
             [integrant.repl.state :refer [config system]]
 
+            [sweet-tooth.generate :as g]
+            [sweet-tooth.endpoint.generate.endpoint] ;; for multimethod def
             [sweet-tooth.endpoint.system :as es]
             [sweet-tooth.endpoint.test.harness :as eth]))
 
