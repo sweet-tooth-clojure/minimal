@@ -21,14 +21,15 @@
    :repl         {:repl-options {:init-ns user}}
    :uberjar      {:aot :all}
    :profiles/dev {}
-   :project/dev  {:source-paths           ["dev/src"]
-                  :resource-paths         ["dev/resources" "frontend-target/dev"]
-                  :lein-tools-deps/config {:aliases [:dev :test]}
-                  :plugins                [[test2junit "1.4.2"]]
-                  :test2junit-output-dir  ".out/test-results"}
+   :project/dev  ^:leaky {:source-paths           ["dev/src"]
+                          :resource-paths         ["dev/resources" "frontend-target/dev"]
+                          :lein-tools-deps/config {:aliases [:dev :test]}
+                          :plugins                [[test2junit "1.4.2"]]
+                          :test2junit-output-dir  ".out/test-results"}
    :staging      {:resource-paths         ["dev/resources" "frontend-target/staging"]
                   :lein-tools-deps/config {:aliases ^:replace [:backend]}}
-   :prod         {:resource-paths         ["frontend-target/prod"]
+   :prod         {:target-path            "target/prod/"
+                  :resource-paths         ["frontend-target/prod"]
                   :lein-tools-deps/config {:aliases ^:replace [:backend]}}
 
    :test {:resource-paths         ["dev/resources" "frontend-target/test"]
